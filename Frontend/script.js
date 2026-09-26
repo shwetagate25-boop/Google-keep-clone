@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/notes";
+const API_URL = "https://google-keep-clone-ueuu.onrender.com/api/notes";
 
 
 // ELEMENTS
