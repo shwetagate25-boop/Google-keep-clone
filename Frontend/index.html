@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Google Keep Clone</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="logo">
+        <div class="logo-icon">K</div>
+        <h2>Keep Notes</h2>
+      </div>
+
+      <nav>
+        <button class="nav-btn active">
+          📝 <span>All Notes</span>
+        </button>
+
+        <button class="nav-btn">
+          🗑️ <span>Trash</span>
+        </button>
+      </nav>
+
+      <button id="newNoteBtn" class="new-note-btn">
+        + New Note
+      </button>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+
+        <div class="search-box">
+          🔍
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search notes..."
+          >
+        </div>
+
+        <button id="themeBtn" class="theme-btn">
+          ☀️
+        </button>
+
+      </header>
+
+
+      <!-- TITLE -->
+      <div class="page-title">
+
+        <div>
+          <h1>All Notes</h1>
+          <p id="noteCount">0 notes</p>
+        </div>
+
+        <button id="clearAllBtn" class="clear-btn">
+          Clear All
+        </button>
+
+      </div>
+
+
+      <!-- NOTES -->
+      <section id="notesContainer" class="notes-container">
+
+      </section>
+
+    </main>
+
+
+    <!-- ADD NOTE PANEL -->
+    <section id="notePanel" class="note-panel hidden">
+
+      <div class="panel-header">
+        <h2>Add Note</h2>
+
+        <button id="closePanelBtn" class="close-btn">
+          ×
+        </button>
+      </div>
+
+      <label>Title</label>
+
+      <input
+        type="text"
+        id="titleInput"
+        placeholder="Enter note title"
+      >
+
+      <label>Description</label>
+
+      <textarea
+        id="descriptionInput"
+        placeholder="Enter note description..."
+      ></textarea>
+
+
+      <label>Color</label>
+
+      <div class="colors">
+
+        <button
+          class="color-btn active"
+          data-color="#ffe66d"
+          style="background:#ffe66d"
+        ></button>
+
+        <button
+          class="color-btn"
+          data-color="#9bdcff"
+          style="background:#9bdcff"
+        ></button>
+
+        <button
+          class="color-btn"
+          data-color="#ff9eb5"
+          style="background:#ff9eb5"
+        ></button>
+
+        <button
+          class="color-btn"
+          data-color="#a8e6a3"
+          style="background:#a8e6a3"
+        ></button>
+
+        <button
+          class="color-btn"
+          data-color="#c9a7ff"
+          style="background:#c9a7ff"
+        ></button>
+
+      </div>
+
+
+      <button id="addNoteBtn" class="save-btn">
+        Save Note
+      </button>
+
+    </section>
+
+
+    <!-- EDIT PANEL -->
+    <section id="editPanel" class="note-panel hidden">
+
+      <div class="panel-header">
+
+        <h2>Edit Note</h2>
+
+        <button id="closeEditBtn" class="close-btn">
+          ×
+        </button>
+
+      </div>
+
+      <label>Title</label>
+
+      <input
+        type="text"
+        id="editTitle"
+        placeholder="Enter title"
+      >
+
+      <label>Description</label>
+
+      <textarea
+        id="editDescription"
+        placeholder="Enter description"
+      ></textarea>
+
+      <label>Color</label>
+
+      <div class="edit-colors">
+
+        <button
+          class="edit-color-btn active"
+          data-color="#ffe66d"
+          style="background:#ffe66d"
+        ></button>
+
+        <button
+          class="edit-color-btn"
+          data-color="#9bdcff"
+          style="background:#9bdcff"
+        ></button>
+
+        <button
+          class="edit-color-btn"
+          data-color="#ff9eb5"
+          style="background:#ff9eb5"
+        ></button>
+
+        <button
+          class="edit-color-btn"
+          data-color="#a8e6a3"
+          style="background:#a8e6a3"
+        ></button>
+
+        <button
+          class="edit-color-btn"
+          data-color="#c9a7ff"
+          style="background:#c9a7ff"
+        ></button>
+
+      </div>
+
+      <button id="saveEditBtn" class="save-btn">
+        Update Note
+      </button>
+
+    </section>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
